@@ -5,8 +5,8 @@
 Use GitHub’s Use this template button or:
 
 ```
-gh repo create my-app --template YOUR_USERNAME/rails-react-starter
-git clone git@github.com:YOUR_USERNAME/my-app.gi
+gh repo create my-app --template YOUR_USERNAME/react-rails-app-template
+git clone git@github.com:YOUR_USERNAME/my-app.git
 cd my-app
 ```
 
