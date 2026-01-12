@@ -5,7 +5,7 @@
 Use GitHub’s Use this template button or clone locally:
 
 ```
-git clone https://github.com/YOUR_USERNAME/react-rails-app-template.git my-new-app
+git clone https://github.com/neilglazier/react-rails-app-template.git my-new-app
 cd my-new-app
 rm -rf .git
 git init
