@@ -1,6 +1,6 @@
-# Setup Instructions
+# Setup
 
-## 1. Clone the template
+### 1. Clone the template
 
 Use GitHub’s Use this template button or:
 
@@ -10,14 +10,14 @@ git clone git@github.com:YOUR_USERNAME/my-app.git
 cd my-app
 ```
 
-## 2. Install dependencies
+### 2. Install dependencies
 
 ```
 bundle install
 yarn install
 ```
 
-## 3. Setup database
+### 3. Setup database
 
 This project uses PostgreSQL by default.
 
@@ -25,7 +25,7 @@ This project uses PostgreSQL by default.
 bin/rails db:create
 ```
 
-## 4. Run the app
+### 4. Run the app
 
 This kicks off both `bin/rails server` and `bin/shakapacker-dev-server`
 
