@@ -2,12 +2,15 @@
 
 ### 1. Clone the template
 
-Use GitHub’s Use this template button or:
+Use GitHub’s Use this template button or clone locally:
 
 ```
-gh repo create my-app --template YOUR_USERNAME/react-rails-app-template
-git clone git@github.com:YOUR_USERNAME/my-app.git
-cd my-app
+git clone https://github.com/YOUR_USERNAME/react-rails-app-template.git my-new-app
+cd my-new-app
+rm -rf .git
+git init
+git add .
+git commit -m "Initial commit"
 ```
 
 ### 2. Install dependencies
