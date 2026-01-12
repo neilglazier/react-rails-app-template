@@ -1,24 +1,36 @@
-# README
+# Setup Instructions
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 1. Clone the template
 
-Things you may want to cover:
+Use GitHub’s Use this template button or:
 
-* Ruby version
+```
+gh repo create my-app --template YOUR_USERNAME/rails-react-starter
+git clone git@github.com:YOUR_USERNAME/my-app.gi
+cd my-app
+```
 
-* System dependencies
+## 2. Install dependencies
 
-* Configuration
+```
+bundle install
+yarn install
+```
 
-* Database creation
+## 3. Setup database
 
-* Database initialization
+This project uses PostgreSQL by default.
 
-* How to run the test suite
+```
+bin/rails db:create
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## 4. Run the app
 
-* Deployment instructions
+This kicks off both `bin/rails server` and `bin/shakapacker-dev-server`
 
-* ...
+```
+yarn start
+```
+
+Your app should now be running at http://localhost:3000
