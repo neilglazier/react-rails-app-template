@@ -1,0 +1,32 @@
+{
+  "name": "react-rails-app-template",
+  "description": "A React on Rails application template",
+  "repository": "https://github.com/neilglazier/react-rails-app-template",
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "heroku/ruby"
+    }
+  ],
+  "env": {
+    "RAILS_MASTER_KEY": {
+      "description": "Rails master key for encrypted credentials",
+      "required": true
+    },
+    "RACK_ENV": {
+      "value": "production"
+    },
+    "RAILS_ENV": {
+      "value": "production"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  },
+  "addons": ["heroku-postgresql", "heroku-redis"]
+}
