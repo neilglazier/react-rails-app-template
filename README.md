@@ -18,6 +18,7 @@ git commit -m "Initial commit"
 - Update app name in `package.json`
 - Update app name in `config/application.rb`
 - Update DB names in `config/database.yml`
+- Update DB name in `ci.yml`
 - Update app name, description, and repo in `app.json`
 - Update app name in `manifest.json.erb`
 - Generate new credentials by deleting `config/credentials.yml.enc` and `config/master.key` and running `rails credentials:edit`
