@@ -13,14 +13,24 @@ git add .
 git commit -m "Initial commit"
 ```
 
-### 2. Install dependencies
+### 2. Update app specific configurations
+
+- Update app name in `package.json`
+- Update app name in `config/application.rb`
+- Update DB names in `config/database.yml`
+- Update app name, description, and repo in `app.json`
+- Update app name in `manifest.json.erb`
+- Generate new credentials by deleting `config/credentials.yml.enc` and `config/master.key` and running `rails credentials:edit`
+- Update README
+
+### 3. Install dependencies
 
 ```
 bundle install
 yarn install
 ```
 
-### 3. Setup database
+### 4. Setup database
 
 This project uses PostgreSQL by default.
 
@@ -28,7 +38,7 @@ This project uses PostgreSQL by default.
 bin/rails db:create
 ```
 
-### 4. Run the app
+### 5. Run the app
 
 This kicks off both `bin/rails server` and `bin/shakapacker-dev-server`
 
