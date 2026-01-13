@@ -47,3 +47,23 @@ yarn start
 ```
 
 Your app should now be running at http://localhost:3000
+
+# Deployment
+
+Create the app in Heroku using the preconfigured `app.json` schema
+
+```
+heroku create my-new-app --manifest
+```
+
+Push the code
+
+```
+git push heroku main
+```
+
+Open the app
+
+```
+heroku open
+```
