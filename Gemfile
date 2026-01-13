@@ -35,6 +35,8 @@ gem "thruster", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 gem "image_processing", "~> 1.2"
 
+gem "shakapacker", "= 9.5"
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
@@ -58,8 +60,11 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
+  gem "rspec-rails", "~> 8.0"
+  gem "database_cleaner-active_record", "~> 2.2"
+  gem "mock_redis", "~> 0.53.0"
+  gem "factory_bot_rails", "~> 6.5"
+  gem "faker", "~> 3.5"
 end
 
 gem "react_on_rails", "~> 16.1"
-
-gem "shakapacker", "= 9.5"
