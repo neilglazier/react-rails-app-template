@@ -74,7 +74,6 @@ Set environment variables
 
 ```
 heroku config:set RAILS_MASTER_KEY=$(cat config/master.key)
-heroku config:set DISABLE_SPRING=1
 ```
 
 Push the code
