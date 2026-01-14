@@ -51,20 +51,35 @@ Your app should now be running at http://localhost:3000
 
 # Deployment
 
-Create the app in Heroku using the preconfigured `app.json` schema
+Create the app in Heroku
 
 ```
-heroku create my-new-app --manifest
+heroku create my-new-app
+```
+
+Add buildpacks (order matters!)
+
+```
+heroku buildpacks:add heroku/nodejs
+heroku buildpacks:add heroku/ruby
+```
+
+Add addons
+
+```
+heroku addons:create heroku-postgresql:essential-0
+heroku addons:create heroku-redis:mini
+```
+
+Set environment variables
+
+```
+heroku config:set RAILS_MASTER_KEY=$(cat config/master.key)
+heroku config:set DISABLE_SPRING=1
 ```
 
 Push the code
 
 ```
 git push heroku main
-```
-
-Open the app
-
-```
-heroku open
 ```

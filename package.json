@@ -3,6 +3,10 @@
   "name": "app",
   "private": true,
   "version": "0.1.0",
+  "engines": {
+    "node": "22.x",
+    "yarn": "1.22.19"
+  },
   "browserslist": [
     "defaults"
   ],
