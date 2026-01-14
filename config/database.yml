@@ -26,7 +26,16 @@ test:
   database: react_rails_app_template_test
 
 production:
-  <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
-  username: react_rails_app_template
-  password: <%= ENV["REACT_RAILS_APP_TEMPLATE_DATABASE_PASSWORD"] %>
+  primary: &primary_production
+    <<: *default
+    url: <%= ENV['DATABASE_URL'] %>
+    username: react_rails_app_template
+    password: <%= ENV["REACT_RAILS_APP_TEMPLATE_DATABASE_PASSWORD"] %>
+  cache:
+    <<: *primary_production
+    url: <%= ENV.fetch('CACHE_DATABASE_URL', ENV['DATABASE_URL']) %>
+    migrations_paths: db/cache_migrate
+  queue:
+    <<: *primary_production
+    url: <%= ENV.fetch('QUEUE_DATABASE_URL', ENV['DATABASE_URL']) %>
+    migrations_paths: db/queue_migrate
